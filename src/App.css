@@ -1,0 +1,240 @@
+body {
+  width: 100%;
+  font-size: 10px;
+}
+
+html, body, .root {
+  height: 100%;
+}
+
+/* ------- HEADER --------- */
+header {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 8%;
+  /*margin: 2px auto 2px; */
+  background: linear-gradient(to right, #eb4444 0%, #eef266 57%, #3fb0e8 100%);
+  border-bottom: 3px double #c0c0c0;
+  z-index: 2;
+  }
+
+.mainTitle {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1.7em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* --------- MAIN CONTAINER --------- */
+.main-container {
+  display: block;
+  width: 95%;
+  max-height: 80%;
+  align-self: center;
+}
+
+.main-container:focus-within {
+  outline: 3px;
+}
+
+/* hamburger */
+.menu {
+  display: block;
+  border: 2px solid #c0c0c0;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 15px;
+  top: 75px;
+  z-index: 3;
+}
+
+.line {
+  width: 20px;
+  height: 4px;
+  line-height: 5px;
+  vertical-align: middle;
+  background-color: #ae0001;
+  margin: 2.5px auto 2.5px;
+  }
+
+  /* Sidebar */
+.sidebar-container {
+  display: none;
+  border: 3px solid #c0c0c0;
+  width: 200px;
+  height: 75%;
+  background-color: #20b2aa;
+  position: absolute;
+  left: 10px;
+  margin-top: 70px;
+  z-index: 1;
+  }
+
+.marker-filter {
+  width: 100%;
+	height: 85px;
+	text-align: center;
+  margin: auto;
+}
+
+h2 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+ }
+
+.marker-select {
+  background-color: #eee8aa;
+  border: 1px solid #c0c0c0;
+  min-width: 150px;
+	max-width: 80%;
+  height: 35px;
+  font-size: 1.3em;
+  margin: 0 auto 0;
+}
+
+.marker-select :focus {
+	outline: 1px #ae0001;
+}
+
+.list-container {
+  display: block;
+  min-width: 150px;
+	max-width: 90%;
+  height: 76%;
+  font-size: 1.3em;
+  margin: 0 auto 0;
+  overflow-y: hidden;
+}
+
+.marker-list {
+  display: block;
+  background-color:#eee8aa;
+  text-align: left;
+  padding: 0.3em;
+  overflow-y: scroll;
+  height: 76%;
+}
+
+.listTitle {
+  font-size: 1.2em;
+}
+
+li {
+  padding-bottom: 5px;
+}
+
+li:hover {
+  background-color: #c0c0c0;
+  cursor: pointer;
+}
+
+li:focus {
+	background-color: #c0c0c0;
+}
+
+/* Map Container */
+.map-container {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 90%;
+  vertical-align: middle;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Marker */
+.placeMarker:focus {
+  outline: 3px dotted #ae0001;
+}
+
+
+/* Info Window */
+.info {
+  display: grid;
+  grid-template-columns: auto auto;
+  box-sizing: border-box;
+  border: 1px solid #c0c0c0;
+  background-color: #eee8aa;
+  align-content: center;
+}
+
+h3 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  padding: 1em;
+  grid-column: 1 / span 2;
+}
+
+.address {
+  display: block;
+  text-align: justify;
+  width: auto;
+  grid-column: 2;
+}
+
+.picture {
+  grid-column: 2;
+}
+
+
+/* ------- FOOTER --------- */
+footer {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  height: 8%;
+  background: linear-gradient(to right, #eb4444 0%, #eef266 57%, #3fb0e8 100%);
+  border-top: 3px double #c0c0c0;
+  z-index: 2;
+}
+
+p {
+  font-size: 1em;
+}
+
+
+/* ---------- RESPONSIVENESS ----------------*/
+@media screen and (max-width: 390px) {
+  .mainTitle {
+    font-size: 1.6em;
+    font-weight: bold;
+  }
+
+  header {
+    height: 10%;
+  }
+}
+
+@media screen and (min-width: 465px) {
+  .mainTitle {
+    font-size: 2em;
+    font-weight: bold;
+  }
+}
+
+/* for bigger screens hides the menu button and makes the sidebar visible*/
+@media screen and (min-width: 600px) {
+  .menu {
+    display: none;
+  }
+
+  .sidebar-container {
+    display: block;
+  }
+}
